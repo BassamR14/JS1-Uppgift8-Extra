@@ -1,0 +1,16 @@
+.product-list-item {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-spans {
+  display: flex;
+  gap: 10px;
+}
+
+.movie-item {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
