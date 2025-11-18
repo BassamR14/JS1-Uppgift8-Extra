@@ -3,7 +3,7 @@ productInput = document.querySelector("#product");
 quantityInput = document.querySelector("#product-quantity");
 productBtn = document.querySelector(".product-button");
 productList = document.querySelector(".product-list");
-//not working, why?
+//not working, why? because of display:flex.
 productList.style.listStyleType = "disc";
 
 productBtn.addEventListener("click", buyProduct);
@@ -83,9 +83,9 @@ addMovieBtn.addEventListener("click", addMovie);
 //     console.log(movieList);
 
 //     //sort using movie score
-//     let listArray = movieList.querySelectorAll(".movie-item");
+//     let nodeList = movieList.querySelectorAll(".movie-item");
 //     //make an array from the nodelist
-//     let scoreArray = Array.from(listArray);
+//     let listArray = Array.from(nodeList);
 //     //how do i access the moviescorevalue from the array?
 //     console.log(scoreArray);
 //   } else {
@@ -116,6 +116,7 @@ function addMovie() {
     //   movieMap = new Map([...movieMap.entries()].sort((a, b) => a - b));
 
     const movieArray = Array.from(movieMap).sort((a, b) => b[1] - a[1]);
+    console.log(movieArray);
     movieMap = new Map(movieArray);
 
     movieList.innerHTML = "";
