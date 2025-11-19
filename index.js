@@ -94,6 +94,7 @@ function addMovie() {
 
     listArray.sort((elementA, elementB) => {
       //Jämför elementA's child spans innertext, med elementBs child spans innertext
+      //we need to be able to reach the score value, easiest way is to put it in a span, and call the span innertext.
       return (
         +elementB.querySelector("span").innerText -
         +elementA.querySelector("span").innerText
